@@ -37,13 +37,13 @@ public class Crop : MonoBehaviour
 
     private void OnEnable()
     {
-        //GameManager.Instance.AddGoldPerSec(goldGenerationPerSec);
-        //GameManager.Instance.AddFoodPerSec(foodGenerationPerSec);
+        GameManager.Instance.AddGoldPerSec(goldGenerationPerSec);
+        GameManager.Instance.AddFoodPerSec(foodGenerationPerSec);
     }
     private void OnDisable()
     {
-        //GameManager.Instance.AddGoldPerSec(-goldGenerationPerSec);
-        //GameManager.Instance.AddFoodPerSec(-foodGenerationPerSec);
+        GameManager.Instance.AddGoldPerSec(-goldGenerationPerSec);
+        GameManager.Instance.AddFoodPerSec(-foodGenerationPerSec);
     }
 
     //Price function = e^(0.05x), x is the CropAmount
