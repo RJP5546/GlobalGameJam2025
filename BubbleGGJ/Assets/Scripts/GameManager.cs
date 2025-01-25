@@ -1,16 +1,47 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private float goldPerSecond;
+    [SerializeField] private float foodPerSecond;
+    [SerializeField] private float targetFoodPerSecond;
+    [SerializeField] private float currentGold;
+    [SerializeField] private float currentFood;
+
+    [SerializeField] private TMP_Text goldUI;
+    [SerializeField] private TMP_Text goldGenerationUI;
+    [SerializeField] private Slider foodUI;
+
     void Start()
     {
-        
+        InvokeRepeating("AddResources", 1f, 1f);  //1s delay, repeat every 1s
     }
 
-    // Update is called once per frame
-    void Update()
+    void AddResources()
     {
-        
+        currentGold += goldPerSecond;
+        currentFood += foodPerSecond;
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        goldUI.text = $"Gold: {currentGold}";
+        goldGenerationUI.text = $"Gold/s: {goldPerSecond}";
+        foodUI.value = foodPerSecond / targetFoodPerSecond;
+    }
+
+    public void AddGoldPerSec(float gps)
+    {
+        goldPerSecond += gps;
+        UpdateUI();
+    }
+
+    public void AddFoodPerSec(float fps)
+    {
+        foodPerSecond += fps;
+        UpdateUI();
     }
 }
