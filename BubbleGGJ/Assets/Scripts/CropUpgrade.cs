@@ -37,11 +37,18 @@ public class CropUpgrade : MonoBehaviour
 
     private void Update()
     {
-        //If( current money is not enough to buy upgrade)
-        UpgradeButton.GetComponent<Button>().interactable = false;
+        if (Crop == null)
+            return;
+        if(GameManager.Instance.GetCurrentScience()>=Crop.GetNextUpgradeMultiplierPrice())
+        {
+            UpgradeButton.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            UpgradeButton.GetComponent<Button>().interactable = false;
+        }
+        
 
-        //If(enough money)
-        UpgradeButton.GetComponent<Button>().interactable = true;
     }
 
     public void Upgraded()
