@@ -9,6 +9,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private float goldPerSecond;
     [SerializeField] private float foodPerSecond;
     [SerializeField] private float targetFoodPerSecond;
+    [SerializeField] private float endFoodPerSecond;
     [SerializeField] private float currentGold;
     [SerializeField] private float currentFood;
     [SerializeField] private float currentScience;
@@ -20,6 +21,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private TMP_Text pendingScienceUI;
     [SerializeField] private TMP_Text foodPerSecUI;
     [SerializeField] private TMP_Text totalFoodUI;
+    
 
     [SerializeField] private Slider foodUI;
     [SerializeField] private Button timeTravelButton;
@@ -36,6 +38,7 @@ public class GameManager : Singleton<GameManager>
     {
         currentGold += goldPerSecond;
         currentFood += foodPerSecond;
+        CheckForEnd();
         CalculateScience();
         UpdateUI();
     }
@@ -53,20 +56,26 @@ public class GameManager : Singleton<GameManager>
             totalFoodUI.text = currentFood.ToString();
             pendingScienceUI.text = pendingScience.ToString();
             timeTravelButton.interactable = pendingScience > 0;
+            Debug.Log("In");
+        }
+    }
+
+    private void CheckForEnd()
+    {
+        if (foodPerSecond >= endFoodPerSecond)
+        {
+            CancelInvoke("AddResources");
+            SceneSwapper.Instance.LoadScene(2);
+            //Destroy(Manager.instance);
         }
     }
 
     private void CalculateScience()
     {
-        if(foodPerSecond >= 100000000)
+        if(foodPerSecond >= targetFoodPerSecond)
         {
-            pendingScience = (Mathf.Log(foodPerSecond / 100000000) / Mathf.Log(2)) + 1;
-        }
-        if(foodPerSecond >=targetFoodPerSecond) 
-        {
-            CancelInvoke("AddResources");
-            SceneSwapper.Instance.LoadScene(2);
-            //Destroy(Manager.instance);
+            pendingScience = ((Mathf.Log(foodPerSecond / targetFoodPerSecond) / Mathf.Log(2)) + 1)*2;
+            pendingScience = Mathf.Round(pendingScience*100)/100;
         }
     }
 
@@ -120,9 +129,16 @@ public class GameManager : Singleton<GameManager>
 
     public void TimeTravel()
     {
+        ShopManager.Instance.ResetCrops();
+        ShopManager.Instance.Start();
         CancelInvoke("AddResources");
+        currentFood = 0;
+        currentGold = 0;
+        goldPerSecond = 0;
+        foodPerSecond = 0;
         EarnScience();
         pendingScience = 0;
+        targetFoodPerSecond = targetFoodPerSecond * 3;
         CutsceneManager.Instance.PlayCutscene();
         Start();
     }

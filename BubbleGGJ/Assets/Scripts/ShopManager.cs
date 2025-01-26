@@ -51,4 +51,13 @@ public class ShopManager : Singleton<ShopManager>
         }
     }
 
+    public void ResetCrops()
+    {
+        for(int i = 0; i < crops.Count; i++)
+        {
+            crops[i].ResetCrop();
+        }
+
+    }
+
 }
