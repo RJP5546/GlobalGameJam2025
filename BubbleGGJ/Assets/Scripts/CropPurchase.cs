@@ -10,6 +10,10 @@ public class CropPurchase : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI CropAmount;
     [SerializeField]
+    private TextMeshProUGUI GoldPerUnitPerSec;
+    [SerializeField]
+    private TextMeshProUGUI TotalGoldPerSec;
+    [SerializeField]
     private GameObject PurchaseButton;
     [SerializeField]
     private TextMeshProUGUI ButtonText;
@@ -28,19 +32,29 @@ public class CropPurchase : MonoBehaviour
     {
         CropAmount.text = Crop.GetCropAmount().ToString();
         ButtonText.text = Crop.GetNextCropPrice().ToString();
+        TotalGoldPerSec.text = (Crop.GetGoldGenerationPerSec() * Crop.GetUpgradeMultiplier() * Crop.GetCropAmount()).ToString();
+        GoldPerUnitPerSec.text = (Crop.GetGoldGenerationPerSec() * Crop.GetUpgradeMultiplier()).ToString();
+
     }
 
     private void Update()
     {
-        //If( current money is not enough to buy upgrade)
-        PurchaseButton.GetComponent<Button>().interactable = false;
-
-        //If(enough money)
-        PurchaseButton.GetComponent<Button>().interactable = true;
+        if (Crop == null)
+            return;
+        if (GameManager.Instance.GetCurrentGold() >= Crop.GetNextCropPrice())
+        {
+            PurchaseButton.GetComponent<Button>().interactable = true;
+        }
+        else 
+        {
+            PurchaseButton.GetComponent<Button>().interactable = false; 
+        }
+        
     }
 
     public void Purchase()
     {
         Crop.Purchased();
+        UpdatePrice();
     }
 }

@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 05c5edfb1603cc34b93b80b993fb6ee8
   - enabled: 1
-    path: Assets/Scenes/GamemnagerTest.unity
-    guid: 321a9b9c53f0c1f43a62dd9eae266204
+    path: Assets/Scenes/MainFarm.unity
+    guid: bbe704a6f397a204099104a4246dd11d
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: ac4cb0899a3ad6145b4396aef4807164
