@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,7 +19,9 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private TMP_Text pendingScienceUI;
     [SerializeField] private TMP_Text foodPerSecUI;
     [SerializeField] private TMP_Text totalFoodUI;
+
     [SerializeField] private Slider foodUI;
+    [SerializeField] private Button timeTravelButton;
 
     void Start()
     {
@@ -45,9 +48,10 @@ public class GameManager : Singleton<GameManager>
 
         if (foodPerSecUI.gameObject.activeSelf)
         {
-            foodPerSecUI.text = $"Food/s: {foodPerSecond}";
+            foodPerSecUI.text = $"{foodPerSecond}/s";
             totalFoodUI.text = currentFood.ToString();
             pendingScienceUI.text = pendingScience.ToString();
+            timeTravelButton.interactable = pendingScience > 0;
         }
     }
 
@@ -62,6 +66,7 @@ public class GameManager : Singleton<GameManager>
     public void EarnScience()
     {
         AddScience(pendingScience);
+        pendingScience = 0;
     }
 
     public void AddGoldPerSec(float gps)
@@ -104,5 +109,14 @@ public class GameManager : Singleton<GameManager>
     {
         foodPerSecond -= food;
         UpdateUI();
+    }
+
+    public void TimeTravel()
+    {
+        CancelInvoke("AddResources");
+        EarnScience();
+        pendingScience = 0;
+        CutsceneManager.Instance.PlayCutscene();
+        Start();
     }
 }

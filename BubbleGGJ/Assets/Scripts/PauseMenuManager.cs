@@ -53,4 +53,9 @@ public class PauseMenuManager : MonoBehaviour
         audioMixer.SetFloat("SFXVolume", Mathf.Log10(val) * 20);
         PlayerPrefs.SetFloat("MusicVolume", val);
     }
+
+    private void UpdateGithupPlease()
+    {
+        //i hope this works
+    }
 }
