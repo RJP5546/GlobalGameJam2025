@@ -32,6 +32,7 @@ public class Crop : MonoBehaviour
     public float GetNextCropPrice() { return nextCropPrice; }
     public int GetCropAmount() { return cropAmount; }
     public float GetGoldGenerationPerSec() { return goldGenerationPerSec; }
+    public float GetBaseCropPrice() { return baseCropPrice; }
 
     private void OnEnable()
     {
