@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CropGrowingBehavior : MonoBehaviour
 {
@@ -17,8 +18,19 @@ public class CropGrowingBehavior : MonoBehaviour
     public float growTime = 1f;
     public float maxSize = 200f;
     public float minSize = 1f;
-
+    
     public bool isMaxSize = false;
+    // plays glowing particles if the crop is upgraded
+
+    // particle system
+    public ParticleSystem upgradeParticle;
+
+    public void CropUpgradeParticles()
+    {
+        ParticleSystem Correct = Instantiate(upgradeParticle, new Vector3(parentObject.transform.position.x - 1f, parentObject.transform.position.y, parentObject.transform.position.z - 2f), Quaternion.Euler(-90, 0, 0));
+        Correct.Play();
+        Destroy(Correct.gameObject, 3f);
+    }
 
     public void CropAmount()
     {
@@ -36,10 +48,13 @@ public class CropGrowingBehavior : MonoBehaviour
             {
                 CropsGrowing[i].SetActive(true);
                 i++;
+                CropUpgradeParticles();
                 price = 0;
             }
         }
     }
+
+
 
     private IEnumerator Grow(GameObject crop)
     {
