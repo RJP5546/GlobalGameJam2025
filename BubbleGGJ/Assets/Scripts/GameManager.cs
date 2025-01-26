@@ -10,9 +10,14 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private float currentGold;
     [SerializeField] private float currentFood;
     [SerializeField] private float currentScience;
+    [SerializeField] private float pendingScience;
 
     [SerializeField] private TMP_Text goldUI;
     [SerializeField] private TMP_Text goldGenerationUI;
+    [SerializeField] private TMP_Text currentScienceUI;
+    [SerializeField] private TMP_Text pendingScienceUI;
+    [SerializeField] private TMP_Text foodPerSecUI;
+    [SerializeField] private TMP_Text totalFoodUI;
     [SerializeField] private Slider foodUI;
 
     void Start()
@@ -27,6 +32,7 @@ public class GameManager : Singleton<GameManager>
     {
         currentGold += goldPerSecond;
         currentFood += foodPerSecond;
+        CalculateScience();
         UpdateUI();
     }
 
@@ -34,7 +40,28 @@ public class GameManager : Singleton<GameManager>
     {
         goldUI.text = $"Gold: {currentGold}";
         goldGenerationUI.text = $"Gold/s: {goldPerSecond}";
+        currentScienceUI.text = currentScience.ToString();
         foodUI.value = foodPerSecond / targetFoodPerSecond;
+
+        if (foodPerSecUI.gameObject.activeSelf)
+        {
+            foodPerSecUI.text = $"Food/s: {foodPerSecond}";
+            totalFoodUI.text = currentFood.ToString();
+            pendingScienceUI.text = pendingScience.ToString();
+        }
+    }
+
+    private void CalculateScience()
+    {
+        if(foodPerSecond >= 1000000000)
+        {
+            pendingScience = (Mathf.Log(foodPerSecond / 1000000000) / Mathf.Log(2)) + 1;
+        }
+    }
+
+    public void EarnScience()
+    {
+        AddScience(pendingScience);
     }
 
     public void AddGoldPerSec(float gps)
