@@ -84,6 +84,7 @@ public class ScrollingText2 : MonoBehaviour
 
     IEnumerator ScrollText()
     {
+        
         while (textRect.anchoredPosition.x > endPosX)
         {
             textRect.anchoredPosition += Vector2.left * scrollSpeed * Time.deltaTime;
