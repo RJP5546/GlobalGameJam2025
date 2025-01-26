@@ -74,8 +74,8 @@ public class ScrollingText2 : MonoBehaviour
         uiText.text = randomMessage;
 
         // Reset text position to start outside the screen
-        startPosX = Screen.width; // Start off-screen to the right
-        endPosX = -textRect.rect.width + 200; // End off-screen to the left
+        startPosX = Screen.width + 100; // Start off-screen to the right
+        endPosX = -textRect.rect.width - 500; // End off-screen to the left
         textRect.anchoredPosition = new Vector2(startPosX, textRect.anchoredPosition.y);
 
         // Start scrolling
