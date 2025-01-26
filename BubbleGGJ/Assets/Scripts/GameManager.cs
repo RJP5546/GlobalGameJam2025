@@ -46,7 +46,7 @@ public class GameManager : Singleton<GameManager>
         currentScienceUI.text = currentScience.ToString();
         foodUI.value = foodPerSecond / targetFoodPerSecond;
 
-        if (foodPerSecUI.gameObject.activeSelf)
+        if (foodPerSecUI != null && foodPerSecUI.gameObject.activeSelf)
         {
             foodPerSecUI.text = $"{foodPerSecond}/s";
             totalFoodUI.text = currentFood.ToString();
@@ -57,9 +57,14 @@ public class GameManager : Singleton<GameManager>
 
     private void CalculateScience()
     {
-        if(foodPerSecond >= 1000000000)
+        if(foodPerSecond >= 100000000)
         {
-            pendingScience = (Mathf.Log(foodPerSecond / 1000000000) / Mathf.Log(2)) + 1;
+            pendingScience = (Mathf.Log(foodPerSecond / 100000000) / Mathf.Log(2)) + 1;
+        }
+        if(foodPerSecond >=targetFoodPerSecond) 
+        {
+            CancelInvoke("AddResources");
+            SceneSwapper.Instance.LoadScene(2); 
         }
     }
 

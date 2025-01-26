@@ -14,6 +14,8 @@ namespace SimpleAudioManager
         public static Manager instance => _instance;
         private static Manager _instance = null;
 
+        public bool IsPlaying { get; private set; }
+
         /// <summary>
         /// The attached audio source
         /// </summary>
@@ -99,6 +101,8 @@ namespace SimpleAudioManager
         /// </summary>
         public void PlaySong(PlaySongOptions pOptions)
         {
+            IsPlaying = true;
+
             //  Updates the data collection
             _UpdateSongData();
 
@@ -156,6 +160,7 @@ namespace SimpleAudioManager
         /// </summary>
         public void StopSong(float pFadeOutDuration)
         {
+            IsPlaying = false;
             AudioSource _current = _currentSource;
             StartCoroutine(_FadeVolume(_current, _current.volume, 0f, pFadeOutDuration));
         }

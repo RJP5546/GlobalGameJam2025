@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwapper : Singleton<SceneSwapper>
 {
-    [SerializeField] private PlayerInput playerInput;
-    [SerializeField] private GameObject overworldCamera;
     [SerializeField] private ScreenFader screenFader;
     [SerializeField] private float screenFadeTime;
 
