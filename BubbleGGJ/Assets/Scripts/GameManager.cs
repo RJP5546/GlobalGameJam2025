@@ -133,7 +133,7 @@ public class GameManager : Singleton<GameManager>
         ShopManager.Instance.Start();
         CancelInvoke("AddResources");
         currentFood = 0;
-        currentGold = 0;
+        currentGold = 1;
         goldPerSecond = 0;
         foodPerSecond = 0;
         EarnScience();
