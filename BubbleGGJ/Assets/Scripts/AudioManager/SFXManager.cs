@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class SFXManager : MonoBehaviour
+public class SFXManager : Singleton<SFXManager>
 {
     [SerializeField] private AudioSource buttonsSource;
     [SerializeField] private AudioSource shopSource;
@@ -18,23 +18,25 @@ public class SFXManager : MonoBehaviour
 
     public void PlayButtonSound()
     {
-        buttonsSource.PlayOneShot( buttons[Random.Range(0, buttons.Count - 1)] );
+        buttonsSource.PlayOneShot( buttons[Random.Range(0, buttons.Count)] );
     }
     public void PlayShopSound()
     {
-        shopSource.PlayOneShot(shop[Random.Range(0, shop.Count - 1)]);
+        shopSource.PlayOneShot(shop[Random.Range(0, shop.Count)]);
     }
     public void PlayBubbleSound()
     {
-        bubbleSource.PlayOneShot( bubblePops[Random.Range(0, bubblePops.Count - 1)] );
+        //bubbleSource.PlayOneShot( bubblePops[Random.Range(0, bubblePops.Count - 1)] );
+        bubbleSource.clip = bubblePops[Random.Range(0, bubblePops.Count)];
+        bubbleSource.Play();
     }
     public void PlaycoinsSound()
     {
-        coinsSource.PlayOneShot( coins[Random.Range(0, coins.Count - 1)] );
+        coinsSource.PlayOneShot( coins[Random.Range(0, coins.Count)] );
     }
     public void PlayscienceSound()
     {
-        scienceSource.PlayOneShot( science[Random.Range(0, science.Count - 1)] );
+        scienceSource.PlayOneShot( science[Random.Range(0, science.Count)] );
     }
 
 }
