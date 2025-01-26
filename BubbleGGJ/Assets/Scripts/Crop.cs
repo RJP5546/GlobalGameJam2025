@@ -13,7 +13,9 @@ public class Crop : MonoBehaviour
     public Sprite CropImage;
 
     [SerializeField] private float goldGenerationPerSec;
+    [SerializeField] private float startGoldGen;
     [SerializeField] private float foodGenerationPerSec;
+    [SerializeField] private float startFoodGen;
     [SerializeField] private float upgradeMultiplier = 1f;
     private float nextUpgradeMultiplierPrice;
     [SerializeField]
@@ -28,6 +30,8 @@ public class Crop : MonoBehaviour
 
     private void Awake()
     {
+        goldGenerationPerSec = startGoldGen;
+        foodGenerationPerSec = startFoodGen;
         NextNewCropPrice();
         NewUpgradeMultiplierPrice();
     }
@@ -107,4 +111,21 @@ public class Crop : MonoBehaviour
         cropList[cropCount].SetActive(true);
         cropCount++;
     }
+
+    public void ResetCrop()
+    {
+        cropCount = 0;
+        cropAmount = 0;
+        upgradeMultiplier = 1f;
+        ShopManager.Instance.Start();
+
+        foreach (GameObject crop in cropList)
+        {
+            crop.SetActive(false);
+        }
+        
+        Awake();
+
+    }
+
 }
