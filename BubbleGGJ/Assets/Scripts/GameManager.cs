@@ -21,7 +21,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private TMP_Text pendingScienceUI;
     [SerializeField] private TMP_Text foodPerSecUI;
     [SerializeField] private TMP_Text totalFoodUI;
-    
+
+    public NumberFormat NF;
 
     [SerializeField] private Slider foodUI;
     [SerializeField] private Button timeTravelButton;
@@ -45,14 +46,14 @@ public class GameManager : Singleton<GameManager>
 
     private void UpdateUI()
     {
-        goldUI.text = $"Gold: {currentGold}";
-        goldGenerationUI.text = $"Gold/s: {goldPerSecond}";
+        goldUI.text = $"Gold: {NF.FormatNumber(currentGold)}";
+        goldGenerationUI.text = $"Gold/s: {NF.FormatNumber(goldPerSecond)}";
         currentScienceUI.text = currentScience.ToString();
         foodUI.value = foodPerSecond / targetFoodPerSecond;
 
         if (foodPerSecUI != null && foodPerSecUI.gameObject.activeSelf)
         {
-            foodPerSecUI.text = $"{foodPerSecond}/s";
+            foodPerSecUI.text = $"{NF.FormatNumber(foodPerSecond)}/s";
             totalFoodUI.text = currentFood.ToString();
             pendingScienceUI.text = pendingScience.ToString();
             timeTravelButton.interactable = pendingScience > 0;

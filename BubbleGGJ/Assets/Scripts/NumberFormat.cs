@@ -3,12 +3,7 @@ using UnityEngine;
 public class NumberFormat : MonoBehaviour
 {
 
-    public float number;
-
-    private void Start()
-    {
-        Debug.Log(FormatNumber(number));
-    }
+    
 
     public string FormatNumber(float num)
     {

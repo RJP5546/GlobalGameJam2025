@@ -31,8 +31,8 @@ public class CropUpgrade : MonoBehaviour
     public void UpdatePrice()
     {
         CurrentMultiplier.text = Crop.GetUpgradeMultiplier().ToString();
-        UpgradedMultiplier.text = Crop.GetNextUpgradeMultiplier().ToString();
-        ButtonText.text = Crop.GetNextUpgradeMultiplierPrice().ToString();
+        UpgradedMultiplier.text = GameManager.Instance.NF.FormatNumber(Crop.GetNextUpgradeMultiplier());
+        ButtonText.text = GameManager.Instance.NF.FormatNumber(Crop.GetNextUpgradeMultiplierPrice());
     }
 
     private void Update()
