@@ -101,7 +101,7 @@ public class Crop : MonoBehaviour
 
     private void NewUpgradeMultiplierPrice() 
     {
-        nextUpgradeMultiplierPrice = 10*Mathf.Pow(2f, upgradeMultiplier-1);
+        nextUpgradeMultiplierPrice = 1*Mathf.Pow(2f, upgradeMultiplier-1);
     }
 
     public void ShowNextVeg()
@@ -119,7 +119,6 @@ public class Crop : MonoBehaviour
         cropCount = 0;
         cropAmount = 0;
         upgradeMultiplier = 1f;
-        ShopManager.Instance.Start();
 
         foreach (GameObject crop in cropList)
         {

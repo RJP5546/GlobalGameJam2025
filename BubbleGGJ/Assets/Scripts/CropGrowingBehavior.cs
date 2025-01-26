@@ -61,6 +61,13 @@ public class CropGrowingBehavior : MonoBehaviour
         Vector3 startScale = new Vector3(minSize, minSize, minSize);
         Vector3 maxScale = crop.transform.localScale;
 
+        if(crop.transform.localScale.x<1f)
+        {
+            Vector3 transfer = startScale;
+            startScale = maxScale;
+            maxScale = transfer;
+        }
+
         while (true)  // Loop indefinitely
         {
             // Grow the crop from minSize to maxSize
