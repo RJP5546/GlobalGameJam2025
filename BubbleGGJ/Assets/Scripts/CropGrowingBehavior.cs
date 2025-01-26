@@ -74,6 +74,8 @@ public class CropGrowingBehavior : MonoBehaviour
             crop.transform.localScale = maxScale;  // Ensure it reaches max size
             // pause at max scale
             yield return new WaitForSeconds(2f);
+            //play popping sound if there is a crop
+            if (CropsGrowing[0].activeSelf) { SFXManager.Instance.PlayBubbleSound(); }
             // go back to starting scale
             crop.transform.localScale = startScale;
             // wait

@@ -30,8 +30,8 @@ public class Crop : MonoBehaviour
 
     private void Awake()
     {
-        goldGenerationPerSec = startGoldGen;
-        foodGenerationPerSec = startFoodGen;
+        startGoldGen = goldGenerationPerSec;
+        startFoodGen = foodGenerationPerSec;
         NextNewCropPrice();
         NewUpgradeMultiplierPrice();
     }
@@ -60,6 +60,7 @@ public class Crop : MonoBehaviour
 
     public void Upgraded()
     {
+        SFXManager.Instance.PlayscienceSound();
         GameManager.Instance.SubtractScience(nextUpgradeMultiplierPrice);
 
         GameManager.Instance.SubtractGoldPerSec(goldGenerationPerSec * cropAmount * upgradeMultiplier);
@@ -73,6 +74,7 @@ public class Crop : MonoBehaviour
 
     public void Purchased()
     {
+        SFXManager.Instance.PlaycoinsSound();
         GameManager.Instance.SubtractGold(nextCropPrice);
         IncreaseCropAmount();
         GameManager.Instance.AddGoldPerSec(goldGenerationPerSec * upgradeMultiplier);
@@ -123,8 +125,11 @@ public class Crop : MonoBehaviour
         {
             crop.SetActive(false);
         }
-        
-        Awake();
+
+        goldGenerationPerSec = startGoldGen;
+        foodGenerationPerSec = startFoodGen;
+        NextNewCropPrice();
+        NewUpgradeMultiplierPrice();
 
     }
 
