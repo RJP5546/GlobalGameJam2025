@@ -11,6 +11,7 @@ public class CutsceneManager : Singleton<CutsceneManager>
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private Canvas hudCanvas;
     [SerializeField] private ScreenFader screenFader;
+    [SerializeField] private AudioSource cutsceneAudioSource;
 
     private void Start()
     {
@@ -26,11 +27,13 @@ public class CutsceneManager : Singleton<CutsceneManager>
     private IEnumerator Cutscene()
     {
         yield return screenFader.FadeOut(1f);
+        cutsceneAudioSource.Play();
         yield return new WaitForSeconds(1f);
         hudCanvas.enabled = false;
         cutsceneCam.gameObject.SetActive(true);
         defaultCam.gameObject.SetActive(false);
 
+        
         videoPlayer.time = 0;
         videoPlayer.Play();
         yield return screenFader.FadeIn(0.5f);
