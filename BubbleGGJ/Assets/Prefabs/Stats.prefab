@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 683256294090654142}
   - component: {fileID: 907195367697793357}
   m_Layer: 5
-  m_Name: TotalFood val
+  m_Name: TotalFood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 1229647403075828214}
   - component: {fileID: 6037507031008404970}
   m_Layer: 5
-  m_Name: TotalFood
+  m_Name: Food/s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 3397719195276657839}
   - component: {fileID: 8881420388658109669}
   m_Layer: 5
-  m_Name: Science Earned
+  m_Name: Food/s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: 7656317896307642154}
   - component: {fileID: 3476095141991641415}
   m_Layer: 5
-  m_Name: TotalScienceEarned
+  m_Name: TotalFood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -668,7 +668,7 @@ GameObject:
   - component: {fileID: 5355930698422420843}
   - component: {fileID: 873564166886370824}
   m_Layer: 5
-  m_Name: food/s val
+  m_Name: TotalFood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -878,6 +878,7 @@ GameObject:
   - component: {fileID: 1922188388291427632}
   - component: {fileID: 2075813460840538258}
   - component: {fileID: 5507743301815357402}
+  - component: {fileID: 5098030021457584633}
   m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
@@ -960,6 +961,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &5098030021457584633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985641455699829344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2684d4df9aab9b445be541f2c112312b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenu: {fileID: 4985641455699829344}
+  audioMixer: {fileID: 0}
 --- !u!1 &5311628308192045096
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,7 +1081,7 @@ GameObject:
   - component: {fileID: 6669241309479180506}
   - component: {fileID: 3406729472880807638}
   m_Layer: 5
-  m_Name: Stats
+  m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
