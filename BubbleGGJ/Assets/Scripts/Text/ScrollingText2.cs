@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 
-public class ScrollingText
+public class ScrollingText2 : MonoBehaviour
 {
-    public TextMeshProUGUI text;
-    public float scrollSpeed = 10.0f;
+    
+    public TextMeshProUGUI uiText; // Uncomment for TextMeshPro
+    public float scrollSpeed = 100f; // Speed of the scrolling text
+    public float intervalInSeconds = 60f; // Time interval between messages
 
-    private TextMeshProUGUI cloneText;
-    private RectTransform textRectTransform;
-    private string sourceText;
-    private string tempText;
+    private RectTransform textRect;
+    private float startPosX;
+    private float endPosX;
 
     private List<string> _generalReviews = new List<string> {
         "Popperton - ⭐⭐⭐ - 'I say, there is not a finer Bubble Farm on this planet!'", 
@@ -44,30 +45,50 @@ public class ScrollingText
         "BREAKING NEWS: ", // 90% TO Goal
         "BREAKING NEWS: "}; // 95% To Goal
 
-    void Awake () {
-      textRectTransform = text.GetComponent<RectTransform>();
-        
-      cloneText = Instantiate(text) as TextMeshProUGUI;
-      RectTransform cloneRectTransform = cloneText.GetComponent<RectTransform>();
-      cloneRectTransform.SetParent(textRectTransform);
-      cloneRectTransform.anchorMin = new Vector2(1, 0.5f);
-      cloneRectTransform.localPosition = new Vector3(text.preferredWidth, 0, cloneRectTransform.position.z);
-      cloneRectTransform.localScale = new Vector3(1, 1, 1);
-      cloneText.text = text.text;  
+   
+    void Start()
+    {
+        if (uiText == null)
+        {
+            Debug.LogError("UI Text is not assigned!");
+            return;
+        }
 
-     }
+        textRect = uiText.GetComponent<RectTransform>();
+        StartCoroutine(ShowRandomMessages());
+    }
 
-      private IEnumerator Start(){
-  
-          float width = text.preferredWidth;      
-          Vector3 startPosition = textRectTransform.localPosition;
+    IEnumerator ShowRandomMessages()
+    {
+        while (true)
+        {
+            DisplayRandomMessage();
+            yield return new WaitForSeconds(intervalInSeconds);
+        }
+    }
 
-          float scrollPosition = 0;
-                while (true) {
-           textRectTransform.localPosition = new Vector3(-scrollPosition % width, startPosition.y, startPosition.z);
-           scrollPosition += scrollSpeed * 20 * Time.deltaTime;         
-           yield return null;
-          }      
-     }
+    void DisplayRandomMessage()
+    {
+        // Pick a random message from the list
+        string randomMessage = _generalReviews[Random.Range(0, _generalReviews.Count)];
+        uiText.text = randomMessage;
+
+        // Reset text position to start outside the screen
+        startPosX = Screen.width; // Start off-screen to the right
+        endPosX = -textRect.rect.width + 100; // End off-screen to the left
+        textRect.anchoredPosition = new Vector2(startPosX, textRect.anchoredPosition.y);
+
+        // Start scrolling
+        StartCoroutine(ScrollText());
+    }
+
+    IEnumerator ScrollText()
+    {
+        while (textRect.anchoredPosition.x > endPosX)
+        {
+            textRect.anchoredPosition += Vector2.left * scrollSpeed * Time.deltaTime;
+            yield return null;
+        }
+    }
 
 }
