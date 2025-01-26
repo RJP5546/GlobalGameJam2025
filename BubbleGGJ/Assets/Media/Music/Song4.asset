@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6480e9cdafac4ef49bc3248e7aafad0b, type: 3}
   m_Name: Song4
   m_EditorClassIdentifier: 
-  reverbTail: 0
+  reverbTail: 5
   intensityClips:
   - {fileID: 8300000, guid: 021b4f893b00d3d4db1dfae5b966c6e5, type: 3}

@@ -26,12 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990913480724696837}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -17.170403, y: 3.73, z: -11.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5877645932418580540}
+  - {fileID: 6915800716017444926}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &2966410788635732258
@@ -56,8 +57,8 @@ ParticleSystem:
   autoRandomSeed: 1
   startDelay:
     serializedVersion: 2
-    minMaxState: 0
-    scalar: 0
+    minMaxState: 3
+    scalar: 2
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -116,9 +117,9 @@ ParticleSystem:
     enabled: 1
     startLifetime:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 5
-      minScalar: 5
+      minMaxState: 3
+      scalar: 2
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -170,7 +171,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 20
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -224,7 +225,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0, b: 0, a: 1}
+      maxColor: {r: 1, g: 0.976174, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4008,7 +4009,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.6981132, g: 0.20745817, b: 0.20745817, a: 1}
+      maxColor: {r: 0.2264151, g: 0.10543253, b: 0.037379846, a: 0.46666667}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4835,6 +4836,135 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &1161359419132211615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6915800716017444926}
+  - component: {fileID: 7507347618233586033}
+  m_Layer: 0
+  m_Name: RocketSFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6915800716017444926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161359419132211615}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 19.235903}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8099415068645554334}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &7507347618233586033
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161359419132211615}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 7992229659054913684, guid: 701e261a9bea42149acec7bb558e0257, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 0.75
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 6
+  MaxDistance: 300
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6795654422474472611
 GameObject:
   m_ObjectHideFlags: 0
@@ -4846,6 +4976,7 @@ GameObject:
   - component: {fileID: 5877645932418580540}
   - component: {fileID: 4260557721937427279}
   - component: {fileID: 7229047617797772695}
+  - component: {fileID: 8013079989072767631}
   m_Layer: 0
   m_Name: Firework
   m_TagString: Untagged
@@ -8712,9 +8843,9 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
-    ratio: 0
-    light: {fileID: 0}
+    enabled: 1
+    ratio: 0.01
+    light: {fileID: 8124570547347073221, guid: cc3200d60ca2b15498dce58a187cc4d2, type: 3}
     randomDistribution: 1
     color: 1
     range: 1
@@ -8722,7 +8853,7 @@ ParticleSystem:
     rangeCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 1000
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -8775,7 +8906,7 @@ ParticleSystem:
     intensityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 500
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9726,3 +9857,24 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &8013079989072767631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6795654422474472611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ad2675ad1d6384e8a96433364f3974, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitSoundSource: {fileID: 7507347618233586033}
+  fireworkSounds:
+  - {fileID: 8300000, guid: fc3a36781e5624e4380f217485563b67, type: 3}
+  - {fileID: 8300000, guid: de1a7ecbcb66a2441920f8a7dda38da1, type: 3}
+  - {fileID: 8300000, guid: e2b450c5a6c4bf74ea1003308813f094, type: 3}
+  - {fileID: 8300000, guid: 1c4255039a1d9734dbb14ca78d9e5d96, type: 3}
+  - {fileID: 8300000, guid: f0da610c41d06d844a4b1899d5a9b96f, type: 3}
+  - {fileID: 8300000, guid: a33d8a38298c7a043a6b622a1cd8a37f, type: 3}
+  - {fileID: 8300000, guid: e34636e4f320e114fbd6587b187682e4, type: 3}

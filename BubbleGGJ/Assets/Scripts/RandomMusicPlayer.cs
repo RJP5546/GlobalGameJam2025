@@ -15,6 +15,8 @@ public class RandomMusicPlayer : MonoBehaviour
 
     private IEnumerator PlayRandomSong()
     {
+        yield return new WaitForSeconds(Random.Range(90, 320));
+
         while (true)
         {
             if (Manager.instance.IsPlaying) 
@@ -22,6 +24,7 @@ public class RandomMusicPlayer : MonoBehaviour
                 yield return new WaitForSeconds(Random.Range(90, 320));
                 Manager.instance.PlaySong(RandomSongNotPlayedRecently());
             }
+            else { yield return null; }
         }
         
     }

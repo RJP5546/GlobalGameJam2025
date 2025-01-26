@@ -1,3 +1,4 @@
+using SimpleAudioManager;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -64,7 +65,8 @@ public class GameManager : Singleton<GameManager>
         if(foodPerSecond >=targetFoodPerSecond) 
         {
             CancelInvoke("AddResources");
-            SceneSwapper.Instance.LoadScene(2); 
+            SceneSwapper.Instance.LoadScene(2);
+            //Destroy(Manager.instance);
         }
     }
 
