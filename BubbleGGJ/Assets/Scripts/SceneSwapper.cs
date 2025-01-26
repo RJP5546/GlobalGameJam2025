@@ -10,8 +10,6 @@ public class SceneSwapper : Singleton<SceneSwapper>
     [SerializeField] private ScreenFader screenFader;
     [SerializeField] private float screenFadeTime;
 
-    [SerializeField] private GameObject playerHUD;
-
 
     private void Start()
     {
@@ -30,6 +28,15 @@ public class SceneSwapper : Singleton<SceneSwapper>
         yield return SceneManager.LoadSceneAsync(sceneIndex);
         yield return screenFader.FadeIn(screenFadeTime);
         Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+
+        Application.Quit();
     }
 
 }
