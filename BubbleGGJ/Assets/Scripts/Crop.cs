@@ -1,3 +1,5 @@
+using NUnit.Framework;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +22,9 @@ public class Crop : MonoBehaviour
     private float baseCropPrice;
     [SerializeField]
     private float nextCropPrice;
+    [SerializeField]
+    private List<GameObject> cropList;
+    private int cropCount = 0;
 
     private void Awake()
     {
@@ -68,6 +73,7 @@ public class Crop : MonoBehaviour
         IncreaseCropAmount();
         GameManager.Instance.AddGoldPerSec(goldGenerationPerSec * upgradeMultiplier);
         GameManager.Instance.AddFoodPerSec(foodGenerationPerSec * upgradeMultiplier);
+        ShowNextVeg();
     }
 
     private void IncreaseCropAmount() 
@@ -90,5 +96,15 @@ public class Crop : MonoBehaviour
     private void NewUpgradeMultiplierPrice() 
     {
         nextUpgradeMultiplierPrice = 10*Mathf.Pow(2f, upgradeMultiplier-1);
+    }
+
+    public void ShowNextVeg()
+    {
+        if (cropCount >= cropList.Count)
+        {
+            return;
+        }
+        cropList[cropCount].SetActive(true);
+        cropCount++;
     }
 }
