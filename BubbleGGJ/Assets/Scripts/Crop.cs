@@ -18,9 +18,10 @@ public class Crop : MonoBehaviour
     private int cropAmount;
     [SerializeField]
     private float baseCropPrice;
+    [SerializeField]
     private float nextCropPrice;
 
-    private void Start()
+    private void Awake()
     {
         NextNewCropPrice();
         NewUpgradeMultiplierPrice();

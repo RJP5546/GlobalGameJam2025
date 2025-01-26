@@ -570,7 +570,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 836106530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.2798813}
+  m_AnchorMin: {x: 0, y: 0.5109546}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -1548,7 +1548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.7000122, y: -5}
+  m_AnchoredPosition: {x: -1.7000122, y: -5.000122}
   m_SizeDelta: {x: 20, y: -10}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &235406078
@@ -1595,7 +1595,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 120483995}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.72011864
+  m_Size: 0.48904538
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2450,7 +2450,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -5, y: 694.33}
+  m_SizeDelta: {x: -5, y: 1025}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &319446419
 MonoBehaviour:
@@ -3378,7 +3378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3386,7 +3386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3426,11 +3426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 539
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -663.44
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3443,6 +3443,18 @@ PrefabInstance:
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 420360311}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdatePrice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CropPurchase, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6849484900117379430, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_Name
@@ -4930,7 +4942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.x
@@ -4938,7 +4950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4978,11 +4990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 539
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -970.16
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4995,6 +5007,18 @@ PrefabInstance:
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2043557371}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdatePrice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CropPurchase, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6849484900117379430, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_Name
@@ -5428,8 +5452,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -5, y: 694.33}
+  m_AnchoredPosition: {x: 0, y: -0.00002670288}
+  m_SizeDelta: {x: -5, y: 1025}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &821482815
 MonoBehaviour:
@@ -6180,6 +6204,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1048755126}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdatePrice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CropPurchase, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6849484900117379430, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_Name
       value: CropUpgrade
@@ -6343,7 +6379,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 420049683}
   m_FillRect: {fileID: 1586942122}
   m_HandleRect: {fileID: 420049681}
@@ -6438,7 +6474,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.x
@@ -6446,7 +6482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -6486,11 +6522,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 539
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -867.92
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6503,6 +6539,18 @@ PrefabInstance:
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1589145092}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdatePrice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CropPurchase, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6849484900117379430, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_Name
@@ -8175,7 +8223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.7000122, y: -5}
+  m_AnchoredPosition: {x: -1.7000122, y: -4.999939}
   m_SizeDelta: {x: 20, y: -10}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1115310837
@@ -8222,7 +8270,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 988159070}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.72011864
+  m_Size: 0.4878049
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13746,7 +13794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.x
@@ -13754,7 +13802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -13794,11 +13842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 539
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -356.72003
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13811,6 +13859,18 @@ PrefabInstance:
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1713399025}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdatePrice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CropPurchase, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6849484900117379430, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_Name
@@ -15384,7 +15444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.x
@@ -15392,7 +15452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -15432,11 +15492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 539
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -458.96002
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15449,6 +15509,18 @@ PrefabInstance:
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 204606226}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdatePrice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CropPurchase, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6849484900117379430, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_Name
@@ -15497,7 +15569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.x
@@ -15505,7 +15577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -15545,11 +15617,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 539
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -561.2
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15562,6 +15634,18 @@ PrefabInstance:
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 300400466}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdatePrice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CropPurchase, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6849484900117379430, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_Name
@@ -15610,7 +15694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.x
@@ -15618,7 +15702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -15658,11 +15742,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 539
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -254.48001
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -15675,6 +15759,18 @@ PrefabInstance:
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 239435208}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdatePrice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CropPurchase, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6849484900117379430, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_Name
@@ -17648,7 +17744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.x
@@ -17656,7 +17752,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -17696,11 +17792,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 539
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -765.68
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -17713,6 +17809,18 @@ PrefabInstance:
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 822832753}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdatePrice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CropPurchase, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6849484900117379430, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_Name
@@ -18756,7 +18864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.x
@@ -18764,7 +18872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -18804,11 +18912,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 539
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -152.24
       objectReference: {fileID: 0}
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -18821,6 +18929,18 @@ PrefabInstance:
     - target: {fileID: 1195883624440418970, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 578047587}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdatePrice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2744540568704758034, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CropPurchase, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6849484900117379430, guid: 1b5294183fe475943be1eb56f6f297f3, type: 3}
       propertyPath: m_Name
@@ -25277,12 +25397,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Eggplant
-  CropImage: {fileID: 0}
-  goldGenerationPerSec: 0
-  foodGenerationPerSec: 0
+  CropImage: {fileID: 21300000, guid: daadbe8ef56094145924937bf346d8c0, type: 3}
+  goldGenerationPerSec: 616025
+  foodGenerationPerSec: 78125
   upgradeMultiplier: 1
   cropAmount: 0
-  baseCropPrice: 0
+  baseCropPrice: 1710040
+  nextCropPrice: 0
 --- !u!4 &1189537904739050617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4204144469229492427, guid: 58c34798ca8909c48b89029cdb763a63, type: 3}
@@ -25323,12 +25444,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Garlic
-  CropImage: {fileID: 0}
-  goldGenerationPerSec: 0
-  foodGenerationPerSec: 0
+  CropImage: {fileID: 21300000, guid: 588b3ba9fddd85a41917ba9fc2617b7d, type: 3}
+  goldGenerationPerSec: 9
+  foodGenerationPerSec: 25
   upgradeMultiplier: 1
   cropAmount: 0
-  baseCropPrice: 0
+  baseCropPrice: 12
+  nextCropPrice: 0
 --- !u!4 &1189537904877419612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8279014766662534182, guid: ca14250e12217924d840048a72752bca, type: 3}
@@ -25369,12 +25491,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Pepper
-  CropImage: {fileID: 0}
-  goldGenerationPerSec: 0
-  foodGenerationPerSec: 0
+  CropImage: {fileID: 21300000, guid: 3e2e22d7f25454d49ad5e9b811c134d4, type: 3}
+  goldGenerationPerSec: 10098000
+  foodGenerationPerSec: 1953125
   upgradeMultiplier: 1
   cropAmount: 0
-  baseCropPrice: 0
+  baseCropPrice: 210000000
+  nextCropPrice: 0
 --- !u!4 &1189537905052508964 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3387852968431901214, guid: 1ce361ee18478044eb7145e6d0186ead, type: 3}
@@ -25415,12 +25538,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Pumpkin
-  CropImage: {fileID: 0}
-  goldGenerationPerSec: 0
-  foodGenerationPerSec: 0
+  CropImage: {fileID: 21300000, guid: 978fc47c6e307fa468d7fe07da6e7474, type: 3}
+  goldGenerationPerSec: 3
+  foodGenerationPerSec: 5
   upgradeMultiplier: 1
   cropAmount: 0
-  baseCropPrice: 0
+  baseCropPrice: 5
+  nextCropPrice: 0
 --- !u!4 &1189537905534877739 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4635862776741190383, guid: 07f33d55fde55ea42986b7c4a41278f9, type: 3}
@@ -25461,12 +25585,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Corn
-  CropImage: {fileID: 0}
-  goldGenerationPerSec: 0
-  foodGenerationPerSec: 0
+  CropImage: {fileID: 21300000, guid: 6a0c9ba1a74d6c648a9644da0b1051b8, type: 3}
+  goldGenerationPerSec: 7945000
+  foodGenerationPerSec: 390625
   upgradeMultiplier: 1
   cropAmount: 0
-  baseCropPrice: 0
+  baseCropPrice: 18000000
+  nextCropPrice: 0
 --- !u!4 &1189537905786919782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 371555394391882981, guid: 6abd15190d292f54ab102785e2ea88eb, type: 3}
@@ -25507,12 +25632,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Carrot
-  CropImage: {fileID: 0}
-  goldGenerationPerSec: 0
-  foodGenerationPerSec: 0
+  CropImage: {fileID: 21300000, guid: 45884f5891e5e6c45a027d7c1037ebf5, type: 3}
+  goldGenerationPerSec: 415
+  foodGenerationPerSec: 625
   upgradeMultiplier: 1
   cropAmount: 0
-  baseCropPrice: 0
+  baseCropPrice: 1400
+  nextCropPrice: 0
 --- !u!4 &1189537906300922979 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8957974963265426504, guid: 4f436fdf5ba05394496e8bf8cfe96277, type: 3}
@@ -25553,12 +25679,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Wheat
-  CropImage: {fileID: 0}
-  goldGenerationPerSec: 0
-  foodGenerationPerSec: 0
+  CropImage: {fileID: 21300000, guid: beb7930fa90cd7a4ea496d3d8a7247dd, type: 3}
+  goldGenerationPerSec: 5128
+  foodGenerationPerSec: 3125
   upgradeMultiplier: 1
   cropAmount: 0
-  baseCropPrice: 0
+  baseCropPrice: 15020
+  nextCropPrice: 0
 --- !u!4 &1189537906305768591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 355024214136571403, guid: 025042551ef5f3740ac6323c02e096ac, type: 3}
@@ -25599,12 +25726,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Melon
-  CropImage: {fileID: 0}
-  goldGenerationPerSec: 0
-  foodGenerationPerSec: 0
+  CropImage: {fileID: 21300000, guid: 09663919fe2839f408f4b209f02d487a, type: 3}
+  goldGenerationPerSec: 48750
+  foodGenerationPerSec: 15625
   upgradeMultiplier: 1
   cropAmount: 0
-  baseCropPrice: 0
+  baseCropPrice: 163000
+  nextCropPrice: 0
 --- !u!4 &1189537906340205336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6103798103810593198, guid: 977289f57d3559b4b89dc0802f55348c, type: 3}
@@ -25650,12 +25778,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Tomato
-  CropImage: {fileID: 0}
-  goldGenerationPerSec: 0
-  foodGenerationPerSec: 0
+  CropImage: {fileID: 21300000, guid: 963d5081f22b7be42a903d22aeffc4da, type: 3}
+  goldGenerationPerSec: 50
+  foodGenerationPerSec: 125
   upgradeMultiplier: 1
   cropAmount: 0
-  baseCropPrice: 0
+  baseCropPrice: 135
+  nextCropPrice: 0
 --- !u!1001 &2136058007093028951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27087,12 +27216,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Cabbage
-  CropImage: {fileID: 0}
-  goldGenerationPerSec: 0
-  foodGenerationPerSec: 0
+  CropImage: {fileID: 21300000, guid: c34e04ed8f6f90a46bbeef224fbddc56, type: 3}
+  goldGenerationPerSec: 0.5
+  foodGenerationPerSec: 1
   upgradeMultiplier: 1
   cropAmount: 0
-  baseCropPrice: 0
+  baseCropPrice: 1
+  nextCropPrice: 0
 --- !u!1001 &8990742010799833788
 PrefabInstance:
   m_ObjectHideFlags: 0

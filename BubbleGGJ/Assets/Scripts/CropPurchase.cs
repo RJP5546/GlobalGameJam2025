@@ -34,6 +34,7 @@ public class CropPurchase : MonoBehaviour
         ButtonText.text = Crop.GetNextCropPrice().ToString();
         TotalGoldPerSec.text = (Crop.GetGoldGenerationPerSec() * Crop.GetUpgradeMultiplier() * Crop.GetCropAmount()).ToString();
         GoldPerUnitPerSec.text = (Crop.GetGoldGenerationPerSec() * Crop.GetUpgradeMultiplier()).ToString();
+
     }
 
     private void Update()
