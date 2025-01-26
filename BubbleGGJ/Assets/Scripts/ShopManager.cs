@@ -14,7 +14,7 @@ public class ShopManager : Singleton<ShopManager>
     [SerializeField] private List<CropUpgrade> cropUpgradeList;
     [SerializeField] private List<Crop> crops;
 
-    private void Start()
+    public void Start()
     {
         int count = 0;
         foreach(Crop crop in crops)
