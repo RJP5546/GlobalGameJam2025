@@ -20,9 +20,9 @@ public class CropUpgrade : MonoBehaviour
     private TextMeshProUGUI Name;
 
 
-    public void NewCrop(Crop NewCrop)
+    public void NewCrop(Crop crop)
     {
-        Crop = NewCrop;
+        Crop = crop;
         Name.text = Crop.Name;
         CropImage.sprite = Crop.CropImage;
         UpdatePrice();

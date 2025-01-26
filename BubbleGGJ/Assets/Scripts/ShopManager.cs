@@ -23,11 +23,11 @@ public class ShopManager : Singleton<ShopManager>
             cropUpgradeList[count].NewCrop(crop);
             count++;
         }
-        HideCrops();
+        //HideCrops();
     }
     private void Update()
     {
-        CheckToUnhide();
+        //CheckToUnhide();
     }
 
     private void HideCrops()
